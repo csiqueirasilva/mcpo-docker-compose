@@ -1,5 +1,6 @@
 services:
   uvx-mcpo:
+    container_name: mcpo
     build: .
     volumes:
       - ./mcp-config.json:/opt/mcp-config.json:ro
