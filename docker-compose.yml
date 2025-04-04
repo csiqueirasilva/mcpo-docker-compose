@@ -1,8 +1,9 @@
 services:
   uvx-mcpo:
     build: .
-    volume:
+    volumes:
       - ./mcp-config.json:/opt/mcp-config.json:ro
     ports:
       - "8000:8000"
-    command: uvx mcpo --port 8000 -- uvx mcp-server-time --local-timezone=America/Sao_Paulo -- config /opt/mcp-config.json
+    command: uvx mcpo --port 8000 --config /opt/mcp-config.json
+    restart: unless-stopped
