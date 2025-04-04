@@ -6,5 +6,4 @@ services:
       - ./mcp-config.json:/opt/mcp-config.json:ro
     ports:
       - "8000:8000"
-    command: uvx mcpo --port 8000 --config /opt/mcp-config.json
     restart: unless-stopped
