@@ -3,7 +3,7 @@ services:
     container_name: mcpo
     build: .
     volumes:
-      - ./mcp-config.json:/opt/mcp-config.json:ro
+      - ./mcp-config.json:/config.json:ro
     ports:
       - "8000:8000"
     restart: unless-stopped
