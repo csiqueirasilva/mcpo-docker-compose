@@ -19,6 +19,6 @@ services:
     restart: unless-stopped
     env_file:
       - .env-open-webui
-    env:
+    environment:
       - ENABLE_OAUTH_SIGNUP=true
       - OAUTH_MERGE_ACCOUNTS_BY_EMAIL=true
